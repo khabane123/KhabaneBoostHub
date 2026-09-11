@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ha">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2864ea">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon.svg">
+<title>KhabaneBoostHub</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="toast"></div>
+
+<section id="auth" class="auth-wrap">
+  <div class="auth-card">
+    <div class="brand"><div class="brand-mark">RB</div><div><b>KhabaneBoostHub</b><small>__Boost.GROW.SUCCEED__</small></div></div>
+    <div class="auth-tabs"><button class="active" data-auth="login">Shiga</button><button data-auth="register">Yi Register</button></div>
+    <form id="authForm">
+      <label>Username<input id="username" autocomplete="username" required></label>
+      <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+      <button class="primary big" type="submit" id="authSubmit">Shiga Account</button>
+    </form>
+    <p id="authMsg" class="muted"></p>
+  </div>
+</section>
+
+<section id="app" class="hidden">
+  <header class="topbar">
+    <button id="menuBtn" class="icon-btn">☰</button>
+    <div><h1>Dashboard</h1><p>Welcome back, <span id="welcome"></span></p></div>
+    <div class="top-actions"><button class="icon-btn" id="themeBtn">◐</button><button class="icon-btn">♧</button><div class="avatar" id="avatar">A</div></div>
+  </header>
+
+  <aside id="sidebar">
+    <div class="brand side-brand"><div class="brand-mark">RB</div><b>KhabaneBoostHub</b></div>
+    <p class="section-title">OVERVIEW</p>
+    <button class="nav active" data-page="dashboard">▣ <span>Dashboard</span></button>
+    <button class="nav" data-page="wallet">▢ <span>Fund Wallet</span></button>
+    <button class="nav" data-page="earnings">⇄ <span>Move Earnings</span></button>
+    <p class="section-title">SERVICES</p>
+    <button class="nav" data-page="data">▥ <span>Data Plans</span></button>
+    <button class="nav" data-page="airtime">▯ <span>Airtime</span></button>
+    <button class="nav" data-page="cable">▱ <span>Cable TV</span></button>
+    <button class="nav" data-page="electricity">ϟ <span>Electricity</span></button>
+    <button class="nav" data-page="foreign1">◎ <span>Foreign Numbers V1</span></button>
+    <button class="nav" data-page="foreign2">◉ <span>Foreign Numbers V2</span></button>
+    <button class="nav" data-page="boosting">🚀 <span>Social Boosting</span></button>
+    <button class="nav" data-page="marketplace">▤ <span>Marketplace</span></button>
+    <button class="nav" data-page="referrals">♧ <span>Referrals</span></button>
+    <p class="section-title">ACCOUNT</p>
+    <button class="nav" data-page="profile">◯ <span>Profile</span></button>
+    <button class="nav" id="logout">↪ <span>Log out</span></button>
+  </aside>
+
+  <main id="content"></main>
+
+  <nav class="bottom-nav">
+    <button data-page="dashboard">⌂<small>Home</small></button>
+    <button data-page="boosting">🚀<small>Boosting</small></button>
+    <button class="globe">◎</button>
+    <button data-page="logs">◷<small>Logs</small></button>
+    <button data-page="profile">♙<small>Profile</small></button>
+  </nav>
+</section>
+<script src="/app.js"></script>
+<script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(()=>{});</script>
+</body>
+</html>
