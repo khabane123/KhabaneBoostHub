@@ -140,4 +140,4 @@ app.post("/api/service/purchase",auth,(req,res)=>{
 });
 
 app.get("*",(req,res)=>res.sendFile(path.join(__dirname,"public","index.html")));
-app.listen(PORT,()=>console.log(`RoyalBoostHub app running at http://localhost:${PORT}`));
+app.listen(PORT, "0.0.0.0", () => console.log(`KhabaneBoostHub running on port ${PORT}`));
